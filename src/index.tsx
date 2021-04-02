@@ -5,6 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import 'antd/dist/antd.css';
+import { Loader } from './core/loader';
+
+//
+// ─── LOADER ─────────────────────────────────────────────────────────────────────
+//
+Loader.init()
+// ────────────────────────────────────────────────────────────────────────────────
+
 
 ReactDOM.render(
   <React.StrictMode>
