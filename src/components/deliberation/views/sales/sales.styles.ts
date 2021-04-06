@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Button } from 'antd';
+import { Button, Modal } from 'antd';
 import bg_image from '../../../../assets/main_background.jpg'
 ///// Background /////
 export const BgContainer = styled.div`
@@ -14,16 +14,16 @@ export const BgContainer = styled.div`
 `
 export const SaleActivityText = styled.h1`
     /* SaleActivityText */
-    
-    width: 400px;
-    margin: 60px 0px 0px 0px;
+
+    //width: 400px;
+    //margin: 60px 0px 0px 0px;
     //height: 57px;
 
     font-family: 'Kanit', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
-    line-height: 24px;
+    //line-height: 24px;
     /* or 50% */
 
     color: #444444;
@@ -31,7 +31,7 @@ export const SaleActivityText = styled.h1`
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin-bottom: 40px;
+    //margin-bottom: 40px;
 
 `
 
@@ -40,14 +40,75 @@ export const SalesContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 0px 150px 0px 150px;
 
     position: absolute;
     width: 100%;
     height: 100vh;
+    //border: 1px solid blue;
 `
-////////////////// Table Zone ////////////////
+export const SalesInnerHeaderContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 20px;
+    width: 100%;
+    //height: 100px;
+    //border: 1px solid black;
+`
+
+export const HeaderTopRightZone = styled.h1`
+    /* HeaderTopRightZone zone */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    //border: 1px solid red;
+
+`
+////////////////// Button ///////////////////
+export const AddSalesBtn = styled(Button)`
+    margin-left: 20px;
+
+    font-family: 'Kanit', sans-serif;
+    font-size: 15px;
+    width: 150px;
+    height: 35px;
+    border: none;
+    background-color: goldenrod;
+    color: white;
+    box-shadow: none;
+    border-radius: 10px;
+    &:hover{
+        background-color: gray;
+        color: white;
+        border: none;
+        box-shadow: none;
+    }
+    &:focus{
+        background-color: gray;
+        color: white;
+        border: none;
+        box-shadow: none;
+    }
+`
+/////////////    Modal ///////////////////
+export const AddactivityModal = styled(Modal)`
+    //width:1000;
+`
+
+export const ItemModal = styled(Modal)`
+    //width:1000;
+`
+
+///////////// Table Zone ////////////////
 
 export const Table = styled.table`
     height: 600px;
@@ -144,6 +205,9 @@ export const TrContent = styled.tr`
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid rgba(220, 220, 200, 1);
+    &:hover{
+        cursor: pointer;
+    }
 `
 
 export const TdContent = styled.td`
