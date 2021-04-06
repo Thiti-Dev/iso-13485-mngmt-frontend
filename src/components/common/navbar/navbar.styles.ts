@@ -26,7 +26,7 @@ export const RegisZone = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: center;
     padding: 0px;
 
     /* Inside Auto Layout */
