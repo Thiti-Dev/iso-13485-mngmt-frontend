@@ -101,6 +101,7 @@ export const AddSalesBtn = styled(Button)`
 `
 /////////////    Modal ///////////////////
 export const AddactivityModal = styled(Modal)`
+    font-family: 'Kanit', sans-serif;
     //width:1000;
 `
 

@@ -15,7 +15,7 @@ export default function Sales() {
                     <HeaderTopRightZone>
                         <AddSalesBtn> etc,. </AddSalesBtn>
                         <AddSalesBtn> etc,. </AddSalesBtn>
-                        <AddSalesBtn onClick={() => setVisible(true)}> เพิ่มราการ </AddSalesBtn>
+                        <AddSalesBtn onClick={() => setVisible(true)}> เพิ่มรายการ </AddSalesBtn>
                     </HeaderTopRightZone>
                 </SalesInnerHeaderContainer>
 
