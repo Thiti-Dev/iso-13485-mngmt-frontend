@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
-import { Button, Modal } from 'antd';
+import { Button, List} from 'antd';
 import bg_image from '../../../../assets/main_background.jpg'
+
 ///// Background /////
 export const BgContainer = styled.div`
     position: absolute;
@@ -12,108 +13,51 @@ export const BgContainer = styled.div`
     background-size: cover;
     z-index: -1;
 `
-export const SaleActivityText = styled.h1`
-    /* SaleActivityText */
+///////////  Container  ////////////////
+export const FeedbackContainer = styled.div`
+    width: 100%;
+    height: 100vh;
+    opacity: 0.8;
+    padding: 80px 150px 0px 150px;
 
-    //width: 400px;
-    //margin: 60px 0px 0px 0px;
-    //height: 57px;
+    //background-color: green;
+    display: flex;
+    flex-direction: column;
 
+`
+export const TopInnerContainer = styled.div`
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+`
+export const TableContainer = styled.div`
+    width: 100%;
+    height: 120px;
+    //background-color: gray;
+`
+export const MainFeedbackContainer = styled.div`
+    width: 100%;
+    height: 500px;
+    background-color: wheat;
+    overflow-y: auto;
+    padding: 50px 50px 50px 50px;
+`
+
+///////////  Component  ////////////////
+export const FeedbackText = styled.h1`
     font-family: 'Kanit', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
-    //line-height: 24px;
-    /* or 50% */
-
     color: #444444;
-    /* Inside Auto Layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    //margin-bottom: 40px;
-
+    margin-top: 40px;
 `
 
-export const SalesContainer = styled.div`
-    /* BodyContainer */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 150px 0px 150px;
-
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    //border: 1px solid blue;
-`
-export const SalesInnerHeaderContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    margin-top: 20px;
-    width: 100%;
-    //height: 100px;
-    //border: 1px solid black;
-`
-
-export const HeaderTopRightZone = styled.h1`
-    /* HeaderTopRightZone zone */
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    /* Inside Auto Layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    //border: 1px solid red;
-
-`
-////////////////// Button ///////////////////
-export const AddSalesBtn = styled(Button)`
-    margin-left: 20px;
-
-    font-family: 'Kanit', sans-serif;
-    font-size: 15px;
-    width: 150px;
-    height: 35px;
-    border: none;
-    background-color: goldenrod;
-    color: white;
-    box-shadow: none;
-    border-radius: 10px;
-    &:hover{
-        background-color: gray;
-        color: white;
-        border: none;
-        box-shadow: none;
-    }
-    &:focus{
-        background-color: gray;
-        color: white;
-        border: none;
-        box-shadow: none;
-    }
-`
-/////////////    Modal ///////////////////
-export const AddactivityModal = styled(Modal)`
-    font-family: 'Kanit', sans-serif;
-    //width:1000;
-`
-
-export const ItemModal = styled(Modal)`
-    //width:1000;
-`
-
-///////////// Table Zone ////////////////
-
+//////////  Table Zone //////////////
 export const Table = styled.table`
-    height: 600px;
-    //border: 1px solid black; 
 `
 
 export const TheadHeader = styled.thead`
@@ -184,7 +128,6 @@ export const BodyWrapper = styled.div`
     box-shadow: inset 7px 10px 12px #f0f0f0;
     }
     
-    
 `
 export const TbodyContent = styled.tbody`
     height: 100%;
@@ -243,4 +186,10 @@ export const TdContentUniq = styled.td`
     color: black;
     //border: 1px solid black;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+`
+
+//////////// Feedback List //////////////
+export const FeedbackList = styled(List)`
+    font-family: 'Kanit', sans-serif;
+    //background-color: gray;
 `
