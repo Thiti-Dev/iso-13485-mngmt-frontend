@@ -190,5 +190,6 @@ export const TdContentUniq = styled.td`
 
 //////////// Feedback List //////////////
 export const FeedbackList = styled(List)`
+    font-family: 'Kanit', sans-serif;
     //background-color: gray;
 `
