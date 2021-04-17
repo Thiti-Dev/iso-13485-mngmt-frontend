@@ -15,7 +15,7 @@ export const NavTop = styled.div`
     height: 80px;
 
     background: white;
-    //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
 
     z-index:1000; 
 `
