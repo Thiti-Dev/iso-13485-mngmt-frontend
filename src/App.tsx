@@ -4,6 +4,8 @@ import Login from './components/authentication/views/login';
 import Feedback from './components/deliberation/views/feedback';
 import Sales from './components/deliberation/views/sales';
 import Landing from './components/landing/views';
+import Dashboard from './components/dashboard/views';
+
 
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
           <Route exact path="/login" component={Login}/>
           <Route exact path="/sales" component={Sales}/>
           <Route exact path="/feedback" component={Feedback}/>
+          <Route exact path="/dashboard" component={Dashboard}/>
         </Switch>
     </Router>
   );
