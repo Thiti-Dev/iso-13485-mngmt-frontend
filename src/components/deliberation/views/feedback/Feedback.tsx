@@ -1,25 +1,48 @@
 import React from 'react'
 import Navbar from '../../../common/navbar'
-import { List, Avatar } from 'antd';
-import { BodyWrapper, TbodyContent, TdContent, TdContentUniq,TrContent, BgContainer, FeedbackContainer, FeedbackText, MainFeedbackContainer, TableContainer, ThHeader, ThHeaderUniq, TopInnerContainer, TrHeader, FeedbackList } from '../feedback/feedback.styles'
+import Ratingstar from '../../../common/Ratingstar';
+import { BodyWrapper, TbodyContent, TdContent, TdContentUniq,TrContent, BgContainer, FeedbackContainer, FeedbackText, MainFeedbackContainer, TableContainer, ThHeader, ThHeaderUniq, TopInnerContainer, TrHeader, FeedbackList, ContainerBox, CommentBox, InsideHeaderContainer, ColonText, HeaderText, GenLinkContainer, GenBtn, GenPopContainer, GenPopTextBox, GenPopCopyBtn} from '../feedback/feedback.styles'
 import { TheadHeader } from '../feedback/feedback.styles'
-
-const data = [
-    {
-      title: 'Ant Design Title 1',
-    },
-    {
-      title: 'Ant Design Title 2',
-    },
-    {
-      title: 'Ant Design Title 3',
-    },
-    {
-      title: 'Ant Design Title 4',
-    },
-];
+import { Popover } from 'antd';
 
 export default function Feedback() {
+    const [hasFeedback, setHasFeedback] = React.useState(false);
+
+    const [visible, setVisible] = React.useState(false)
+    const GeneretedLinkAndCopyBTN =
+    <>
+        <GenPopContainer>
+            <GenPopTextBox value="https://github.com/SSPRITEz-DEV/react-fundamental-workshop.git"/>
+            <GenPopCopyBtn>คัดลอก</GenPopCopyBtn>
+        </GenPopContainer>
+    </>
+
+    const rendered_feedback = 
+        hasFeedback?
+            <>
+                <ContainerBox>
+                <InsideHeaderContainer><HeaderText>คุณภาพสินค้า</HeaderText>     <ColonText>:</ColonText>  <Ratingstar starcount={0}/> </InsideHeaderContainer>
+                <InsideHeaderContainer><HeaderText>ความคุ้มค่า</HeaderText>        <ColonText>:</ColonText>    <Ratingstar starcount={0}/> </InsideHeaderContainer>
+                <InsideHeaderContainer><HeaderText>ความเร็วในการจัดส่ง</HeaderText>    <ColonText>:</ColonText>    <Ratingstar starcount={0}/></InsideHeaderContainer>
+                <InsideHeaderContainer><HeaderText>การให้บริการจากบริษัท</HeaderText>   <ColonText>:</ColonText>   <Ratingstar starcount={0}/> </InsideHeaderContainer>
+                <CommentBox> สินค้าโอเคมาก ถูกใจ สุดๆได้ของครบตามสั่ง เเนะนำ มาตำเลย สินค้าโอเคมาก ถูกใจ สุดๆได้ของครบตามสั่ง เเนะนำ มาตำเลย สินค้าโอเคมากสินค้าโอเคมาก ถูกใจ สุดๆได้ของครบตามสั่ง เเนะนำ มาตำเลย สินค้าโอเคมาก ถูกใจ สุดๆได้ของครบตามสั่ง เเนะนำ มาตำเลย สินค้าโอเคมาก ถูกใจ สุดๆได้ของครบตามสั่ง เเนะนำ มาตำเลย</CommentBox>
+                </ContainerBox>
+            </>
+            
+        :
+            <>
+                <GenLinkContainer>
+                <Popover
+                    content={GeneretedLinkAndCopyBTN}
+                    trigger="click"
+                >
+                   <GenBtn>สร้าง URL สำหรับให้คำแนะนำ</GenBtn>
+                </Popover>
+                    
+                </GenLinkContainer>
+            </>
+        ;
+        
     return (
         <div>
             <Navbar/>
@@ -64,21 +87,7 @@ export default function Feedback() {
 
                 {/* Feedback form result*/}
                 <MainFeedbackContainer>
-                    <FeedbackList>
-                        <List
-                            itemLayout="horizontal"
-                            dataSource={data}
-                            renderItem={item => (
-                            <List.Item>
-                                <List.Item.Meta
-                                avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                                title={<a href="https://ant.design">{item.title}</a>}
-                                description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-                                />
-                            </List.Item>
-                            )}
-                        />
-                    </FeedbackList>
+                    {rendered_feedback}
                 </MainFeedbackContainer>
             </FeedbackContainer>
         </div>

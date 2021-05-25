@@ -39,6 +39,8 @@ export const DashboardMainContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     
+    font-family: 'Kanit', sans-serif;
+    font-style: normal;
 `
 
 ///////// MenuLeft /////////
@@ -280,3 +282,5 @@ export const DetailP = styled.p`
     color: #454545;
     
 `
+
+

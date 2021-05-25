@@ -1,6 +1,8 @@
 import styled from '@emotion/styled'
 import { Button, Modal } from 'antd';
 import bg_image from '../../../../assets/main_background.jpg'
+import upload_image from './assets/upload_image.png'
+
 ///// Background /////
 export const BgContainer = styled.div`
     position: absolute;
@@ -102,12 +104,138 @@ export const AddSalesBtn = styled(Button)`
 /////////////    Modal ///////////////////
 export const AddactivityModal = styled(Modal)`
     font-family: 'Kanit', sans-serif;
-    //width:1000;
+    font-size: 15px;
+    //width:80rem;
 `
 
 export const ItemModal = styled(Modal)`
-    //width:1000;
+    //background-color: black;
+    font-family: 'Kanit', sans-serif;
+    font-size: 15px;
 `
+/////////////   List Madal //////////////
+
+export const ListContainer = styled.div`
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    padding: 30px 0px 30px 0px;
+    //border: 1px solid red;
+    
+`
+export const ListImage = styled.div`
+    width: 250px;
+    height: 250px;
+    background-image: url(${upload_image});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.05);
+`
+export const ListTextDetailContainer = styled.div`
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    
+    //border: 1px solid green;
+`
+export const ListSigleContainer = styled.div`
+    display: flex;
+    flex-direction: row; 
+`
+export const ListHeaderText = styled.p`
+    font-weight: 600;
+    width: 140px;
+`
+export const ListColonText = styled.p`
+    font-weight: 600;
+`
+export const ListDetailText = styled.p`
+    margin-left: 20px;
+`
+
+export const ListModalFooter = styled.div`
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+`
+export const ListBtn = styled(Button)`
+
+    font-family: 'Kanit', sans-serif;
+    font-size: 15px;
+    width: 150px;
+    height: 35px;
+    border: none;
+    background-color: goldenrod;
+    color: white;
+    box-shadow: none;
+    border-radius: 10px;
+    &:hover{
+        background-color: gray;
+        color: white;
+        border: none;
+        box-shadow: none;
+    }
+    &:focus{
+        background-color: gray;
+        color: white;
+        border: none;
+        box-shadow: none;
+    }
+`
+export const ListBtn2 = styled(Button)`
+
+    font-family: 'Kanit', sans-serif;
+    font-size: 15px;
+    width: 150px;
+    height: 35px;
+    border: none;
+    background-color: gray;
+    color: white;
+    box-shadow: none;
+    border-radius: 10px;
+    &:hover{
+        background-color: gray;
+        color: white;
+        border: none;
+        box-shadow: none;
+    }
+    &:focus{
+        background-color: gray;
+        color: white;
+        border: none;
+        box-shadow: none;
+    }
+`
+////////////    Add Modal /////////////
+export const InsideModalContainer = styled.div`
+    width: 100%;
+    //height: 100%;
+    //background-color: burlywood;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: center;
+`
+export const ListText = styled.p`
+    width: 15%;
+    //border: 1px solid red;
+    padding-left: 10px;
+    color: black;
+`
+export const ListInputBox = styled.input`
+    width: 60%; 
+`
+
+
 
 ///////////// Table Zone ////////////////
 
