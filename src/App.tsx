@@ -6,6 +6,7 @@ import Sales from './components/deliberation/views/sales';
 import Landing from './components/landing/views';
 import Dashboard from './components/dashboard/views';
 import maintenance from './components/manufacturing/maintenance';
+import Feedbacksurvey from './components/Feedbacksurvey';
 
 
 
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/feedback" component={Feedback}/>
           <Route exact path="/dashboard" component={Dashboard}/>
           <Route exact path="/maintenance" component={maintenance}/>
+          <Route exact path="/feedbacksurvey" component={Feedbacksurvey}/>
         </Switch>
     </Router>
   );
